@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/RG31-site-vitrine-reactjs/static/css/main.182bc115.chunk.css",
+    "main.js": "/RG31-site-vitrine-reactjs/static/js/main.431ce611.chunk.js",
+    "main.js.map": "/RG31-site-vitrine-reactjs/static/js/main.431ce611.chunk.js.map",
+    "runtime-main.js": "/RG31-site-vitrine-reactjs/static/js/runtime-main.68e80f7e.js",
+    "runtime-main.js.map": "/RG31-site-vitrine-reactjs/static/js/runtime-main.68e80f7e.js.map",
+    "static/js/2.093ef341.chunk.js": "/RG31-site-vitrine-reactjs/static/js/2.093ef341.chunk.js",
+    "static/js/2.093ef341.chunk.js.map": "/RG31-site-vitrine-reactjs/static/js/2.093ef341.chunk.js.map",
+    "index.html": "/RG31-site-vitrine-reactjs/index.html",
+    "static/css/main.182bc115.chunk.css.map": "/RG31-site-vitrine-reactjs/static/css/main.182bc115.chunk.css.map",
+    "static/js/2.093ef341.chunk.js.LICENSE.txt": "/RG31-site-vitrine-reactjs/static/js/2.093ef341.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/RG31-site-vitrine-reactjs/static/media/CaviarDreams_Italic.0c76ebb1.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68e80f7e.js",
+    "static/js/2.093ef341.chunk.js",
+    "static/css/main.182bc115.chunk.css",
+    "static/js/main.431ce611.chunk.js"
+  ]
+}
