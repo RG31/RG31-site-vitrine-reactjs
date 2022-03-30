@@ -10,6 +10,7 @@ import { Testimonials } from './components/testimonials'
 import { Contact } from './components/contact'
 import JsonData from './data/data.json'
 import SmoothScroll from 'smooth-scroll'
+import {Helmet} from "react-helmet";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -24,6 +25,13 @@ const App = () => {
 
   return (
     <div>
+    <Helmet>
+      <title>Ecommerce Site Details &#x007C; Mina Bui &#x2013; Web Developer in Vancouver, BC</title>
+      <meta name="description"
+        content="Il s'agit d'un modèle site vitrine (Mobile First Design) basé sur ReactJS, adapté à une entreprise, un service en démarrage. La conception est inspirée d'un modèle de Free-CSS </a>" />
+      <meta name="keywords"
+        content="React developer, Front end web developer, responsive user interfaces, interactive web applications, Toulouse web design" />
+    </Helmet>   
       <Navigation />
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
