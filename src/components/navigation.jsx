@@ -1,3 +1,4 @@
+import myLogo from './logo.png';
 export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
@@ -15,7 +16,10 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>{' '}
           </button>
           <a className='navbar-brand page-scroll' href='#page-top'>
-            @RG31
+            {/*
+                myLogo
+            */}
+          <img className="logo" src={myLogo} alt="christina grillet logo" />
           </a>{' '}
         </div>
 

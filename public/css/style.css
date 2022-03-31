@@ -103,7 +103,13 @@ hr {
   transition: all 0.8s ease-out;
 }
 
-/* Navigation */
+.logo {
+  box-shadow: 10px 10px 10px rgba(180, 240, 14, 0.555);
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+
 .navbar-collapse {
   text-align: right;
 }
