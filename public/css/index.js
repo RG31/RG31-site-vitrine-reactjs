@@ -9,7 +9,8 @@ import './fonts/caviar_dreams/CaviarDreams_Bold.ttf';
 import './fonts/caviar_dreams/CaviarDreams_BoldItalic.ttf';
 import './fonts/caviar_dreams/CaviarDreams_Italic.ttf';
 import './fonts/Brandon-Grotesque/brandon-grotesque-light-58a8a4b38001d.otf';
-
+import './fonts/Brandon-Grotesque/brandon-grotesque-black-58a8a3e824392.otf';
+import './fonts/better-grade/BetterGrade-519DV.ttf';
 ReactDOM.render(
   <React.StrictMode>
     <App />

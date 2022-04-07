@@ -1,8 +1,37 @@
 {
     "Header": {
         "title": "Christina Grillet",
-        "paragraph": "Kinésitérapeute | Accompagnement"
-
+        "paragraph": "Artiste en mouvement",
+        "img1": "img/intro/image-1.jpeg",
+        "img2": "img/intro/image-2.jpeg",
+        "img3": "img/intro/image-3.jpeg",
+        "title1": "Nature",
+        "title2": "Abstait",
+        "title3": "Industriel"
+    },
+    "Slider":[
+        {
+            "id": 1,
+            "img": "img/intro/image-1.jpeg",
+            "title": "Nature"
+        },
+        {
+            "id": 2,
+            "img": "img/intro/image-2.jpeg",
+            "title": "Indus"
+        },
+        {
+            "id": 3,
+            "img": "img/intro/image-3.jpeg",
+            "title": "Abstrait"
+        }
+    ],
+    "Seo": {
+        "facebook": "#page-top",
+        "twitter": "#page-top",
+        "youtube": "#page-top",
+        "instagram": "#page-top",
+        "envelope": "#page-top"
     },
     "About": {
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -88,23 +117,18 @@
         }
     ],
     "Team": [{
-            "img": "img/team/01.jpg",
+            "img": "img/intro/image-1.jpg",
             "name": "John Doe",
             "job": "Director"
         },
         {
-            "img": "img/team/02.jpg",
+            "img": "img/intro/image-2.jpg",
             "name": "Mike Doe",
             "job": "Senior Designer"
         }, {
-            "img": "img/team/03.jpg",
+            "img": "img/intro/image-3.jpg",
             "name": "Jane Doe",
             "job": "Senior Designer"
-        },
-        {
-            "img": "img/team/04.jpg",
-            "name": "Karen Doe",
-            "job": "Project Manager"
         }
     ],
     "Contact": {

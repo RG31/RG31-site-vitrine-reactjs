@@ -16,7 +16,7 @@ form-control:focus {
 
 /* CHROME / preferences / apparence / param avancées / mettre en surbrillance rapidement l'objet ciblé => OFF */
 body, html {
-  font-family: "CaviarDreams", "Open Sans", sans-serif;
+  font-family: "fantasy", BrandonGrotesque, "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: #777;
@@ -30,7 +30,7 @@ span {
 }
 
 h2, h3, h4, p, ul {
-  font-family: "CaviarDreams", "Raleway", sans-serif;
+  font-family: BrandonGrotesque, "Raleway", sans-serif;
 }
 
 h2 {
@@ -97,53 +97,82 @@ hr {
   border: 0;
 }
 
+/* Seo */
+#seo .seo-item i.fa {
+  margin-right: 5px;
+}
+
+#seo .seo-info {
+  border-radius: 40px;
+  text-align: left;
+}
+
+#seo .social {
+  margin-right: 25px;
+  text-align: right;
+}
+
+#seo .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#seo .social i.fa {
+  font-size: 21px;
+  height: 48px;
+  padding: 0 0;
+  color: #504d48ee;
+  transition: all 0.3s;
+}
+
+#seo .social i.fa:hover {
+  color: #608dfd;
+  background: #fff;
+}
+
 /* Navigation */
 #menu {
   padding: 15px;
   transition: all 0.8s ease-out;
+  background-color: white;
+  border-color: white;
 }
 
-/* Navigation */
-.navbar-collapse {
-  text-align: right;
+.logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 0px;
+  border-color: #070707fe;
+  border-width: 2px;
+  border-style: solid;
+  margin-left: 60px;
+  opacity: 0.8;
 }
 
-#menu.navbar-default {
-  background-color: #fff;
-  border-color: rgba(231, 231, 231, 0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+.circle {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-image: url(../img/logo.jpg) center center no-repeat;
+  background-size: 141px;
+  background-position: 50%;
 }
 
-#menu a.navbar-brand {
-  font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
-  text-transform: uppercase;
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #menu.navbar-default .navbar-nav > li > a {
-  font-family: "CaviarDreams", "Raleway", sans-serif;
-  font-family: "CaviarDreams_Bold", "Raleway", sans-serif;
+  font-size: 12px;
+  font-family: BrandonGrotesque;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(85, 85, 85, 0.787);
-  font-size: 15px;
-  font-weight: 400;
-  padding: 8px 2px;
-  border-radius: 0;
-  margin: 9px 20px 0 20px;
-}
-
-#menu.navbar-default .navbar-nav > li > a:after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(to right, #eea5ea 0%, #fb5cee 100%);
-  content: "";
-  transition: width 0.2s ease-out;
+  color: #594c35;
+  padding: 10px 50px 10px 10px;
 }
 
 #menu.navbar-default .navbar-nav > li > a:hover:after {
@@ -152,18 +181,6 @@ hr {
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
-}
-
-.navbar-default .navbar-nav > .active > a:after, .navbar-default .navbar-nav > .active > a:hover:after, .navbar-default .navbar-nav > .active > a:focus:after {
-  display: block !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: -1px !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: linear-gradient(to right, #a5eead 0%, #fb5cee 100%) !important;
-  content: "" !important;
-  transition: width 0.2s ease-out !important;
 }
 
 .navbar-toggle {
@@ -281,7 +298,6 @@ hr {
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
   color: #fff;
   background-image: none;
-  /* @RG31 couleur bouton */
   background-color: #86226f5e;
 }
 
@@ -297,53 +313,103 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   outline-offset: none;
 }
 
-/* Header Section  => TON SITE VITRINE */
-#header .intro-text {
-  padding-top: 250px;
-  padding-bottom: 250px;
+/* Carousel Section*/
+.carousel {
+  position: absolute;
+  width: auto;
+  height: 500px;
+}
+
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.carousel .thumb {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#slider h1 {
+  padding-top: 2%;
+  padding-bottom: 20%;
+  padding-bottom: 50px;
+  background-color: #504d48ee;
+  color: #f7c00b;
+  text-align: center;
+  font-family: BetterGrade;
+  font-size: 130px;
+}
+
+/* Header Section  */
+#header .blanc {
+  background-color: white;
+  padding-top: 7%;
+  padding-bottom: 10%;
   text-align: center;
 }
 
-.intro {
-  font-family: "CaviarDreams", "Raleway", sans-serif;
+#header .header-color {
+  padding-top: 2%;
+  padding-bottom: 20%;
+  padding-bottom: 50px;
+  background-color: #504d48ee;
+}
+
+#header .header-picture {
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+#header .intro-text h1 {
+  text-align: center;
+  color: #f7c00b;
+  font-family: BetterGrade;
+  font-size: 130px;
+}
+
+#header .intro-text p {
+  text-align: center;
+  color: white;
+  font-family: BrandonGrotesque_light;
+  font-size: 30px;
+}
+
+#header .intro {
+  font-family: "Brandon-Grotesque", "Raleway", sans-serif;
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 
-.intro .overlay {
+#header .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.intro h1 {
+#header .intro h1 {
   color: white;
   font-size: 82px;
   padding-top: 0px;
   padding-bottom: 20px;
 }
 
-.intro h1 span {
+#header .intro h1 span {
   font-weight: 800;
   color: #5ca9fb;
 }
 
-.intro p {
-  font-family: CaviarDreams;
+#header .intro p {
+  font-family: Brandon-Grotesque;
   color: #fff;
   font-size: 32px;
   margin: 0 auto;
   margin-bottom: 80px;
-}
-
-.intro a {
-  font-family: CaviarDreams_Bold;
-  text-transform: none;
-  font-size: 15px;
 }
 
 /* Features Section  => PRATIQUES */
@@ -353,7 +419,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 #features p, span {
-  font-family: CaviarDreams;
+  font-family: Brandon-Grotesque;
   font-size: 18px;
 }
 
@@ -597,8 +663,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .portfolio-item .hover-bg {
   overflow: hidden;
   position: relative;
-  margin: 0;
-  border-radius: 60px 0px 60px 0px;
+  margin: 30px;
 }
 
 .hover-bg .hover-text {
@@ -606,7 +671,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   text-align: center;
   margin: 0 auto;
   color: #fff;
-  background: linear-gradient(to right, #853386 40%, #ff63ea21 100%);
+  background: linear-gradient(to right, #f7c00b 40%, white 100%);
   padding: 30% 0 0 0;
   height: 100%;
   width: 100%;
@@ -617,7 +682,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .hover-bg .hover-text > h4 {
   font-family: "CaviarDreams_Bold", "Open Sans", sans-serif;
   opacity: 0;
-  color: #fff;
+  color: white;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   transition: all 0.3s;
@@ -750,7 +815,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 #contact .thanks {
-  font-family: "CaviarDreams", "Open Sans", sans-serif;
+  font-family: "Brandon-Grotesque", "Open Sans", sans-serif;
   font-size: 15px;
   padding: 10px 25px 10px;
   color: white;
@@ -833,7 +898,6 @@ label {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-  /* RG31 */
   border-radius: 30px;
 }
 
@@ -883,7 +947,7 @@ label {
 }
 
 #contact .social {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(231, 135, 10, 0.15);
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
@@ -929,14 +993,13 @@ label {
   border-bottom: 2px solid #608dfd;
 }
 
-@media (max-width: 768px) {
-  /* @RG31*/
+@media (max-width: 600px) {
   h2 {
     font-weight: 400;
   }
 
-  .intro h1 {
-    font-size: 55px;
+  #header img {
+    margin: 50px 0;
   }
 
   /* Header Navigation */
@@ -944,13 +1007,34 @@ label {
     background: linear-gradient(to right, #f9f7f8 0%, #f5ca3eba 100%) !important;
   }
 
-  /* Header Section  => TON SITE VITRINE */
+  /* Header Section */
   #header .intro-text {
     padding-top: 150px;
   }
 
   #header .intro p {
     margin-bottom: 40px;
+  }
+
+  #header .header-item {
+    margin: 1px -15px 0 -14px;
+    padding: 0;
+  }
+
+  #header .intro-text h1 {
+    font-size: 80px;
+  }
+
+  #header .header-picture {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* Carousel Section*/
+  .carousel .slide img {
+    width: 80vw !important;
+    height: 40Vh;
+    object-fit: cover;
   }
 
   /* Features Section  => PRATIQUES */
@@ -1019,15 +1103,17 @@ label {
   .hover-bg .hover-text > h4 {
     font-family: "CaviarDreams_Bold", "Open Sans", sans-serif;
     opacity: 1;
-    background-image: linear-gradient(to right, #eab4eaf7 0%, #ff63ea21 100%);
+    background-image: linear-gradient(to right, white 0%, #f7c00b 100%);
     color: #fff;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     transition: all 0.3s;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing: 1px;
     font-weight: 500;
     text-transform: uppercase;
+    margin: 100px;
   }
 
   /* Portfolio Section => GALERIE */
@@ -1047,6 +1133,15 @@ button:focus,
 form-control:focus {
   outline: none;
   outline: transparent;
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+  #header .blanc {
+    background-color: white;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

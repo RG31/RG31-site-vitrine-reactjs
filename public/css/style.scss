@@ -1,14 +1,20 @@
 // @use 'vars';
 // Generic
-$buton-menu-gradient-0:  #a5eead;
-$buton-menu-gradient-1:  #f58de4;
-$buton-header-background: #cc92c985;
-$buton-header-gradient-1: #eea5ea;
-$buton-header-gradient-2: #ff63ea21;
-$buton-header-gradient-3: #cc92c985;
+$icon-seo:  #504d48ee; 
+$bg-header:  #504d48ee;
+$title-header:  #f7c00b ;
+$over-text-h4:  #504d48ee; 
+//$over-bg-1:  #f58de4 ; mauve
+//$over-bg-2:  #853386 ; rose
+$over-bg-1:  white ;
+$over-bg-2:  #f7c00b ;
+$bg-burger:  #f5ca3eba;
 
 $buton-header-active:  #86226f5e;
-$icon-shadow:  #ad2e905e;
+
+$font-1:  BrandonGrotesque;
+$font-1-light:  BrandonGrotesque_light;
+$font-2:  BetterGrade;
 
 /* supprimer le focus de la sélection
 Effacer les données de navigation pour le prende en compte */
@@ -28,7 +34,7 @@ form-control:focus
 /* CHROME / preferences / apparence / param avancées / mettre en surbrillance rapidement l'objet ciblé => OFF */
 
 body, html {
-	font-family: 'CaviarDreams', 'Open Sans', sans-serif;
+	font-family: 'fantasy', $font-1, 'Open Sans', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
@@ -40,7 +46,7 @@ span {
 	font-weight: 800;
 }
 h2, h3, h4, p, ul {
-    font-family: 'CaviarDreams', 'Raleway', sans-serif;
+    font-family: $font-1, 'Raleway', sans-serif;
 }
 h2 {
 	text-transform: uppercase;
@@ -96,69 +102,95 @@ hr {
 	margin-bottom: 20px;
 	border: 0;
 }
+/* Seo */
+#seo .seo-item i.fa {
+	margin-right: 5px;
+}
+#seo .seo-info {
+//background: linear-gradient(to left, #e7529d 0%, #171817 100%) !important;
+	border-radius: 40px;
+	text-align: left;
+}
+#seo .social {
+	//border-top: 1px solid rgba(231, 135, 10, 0.15);
+	//padding-top: 50px;
+	margin-right: 25px;
+	text-align: right;
+}
+#seo .social ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+#seo .social i.fa {
+	font-size: 21px;
+	//width: 48px;
+	height: 48px;
+	padding: 0 0;
+	//border: 2px solid rgb(241, 179, 6);
+	//color: rgb(241, 179, 6);
+	//color: #504d48cf;
+	color: $icon-seo ;
+	//border-radius: 50%;
+	transition: all 0.3s;
+}
+#seo .social i.fa:hover {
+	color: #608dfd;
+	background: #fff;
+}
 /* Navigation */
+
 #menu {
 	padding: 15px;
 	transition: all 0.8s ease-out;
+	background-color: white;
+	border-color: white;
 }
+.logo {
+	//box-shadow: 10px 10px 10px rgba(180, 240, 14, 0.555);
+	//border-radius: 50%;
+	display: block;
+	width: 80px;
+	height: 80px;
+	padding: 0px;
+	//margin-bottom: 80px;
+	border-color: #070707fe;
+	border-width: 2px;
+	border-style: solid;
+	margin-left: 60px;
+	opacity: 0.8;
+}
+	.circle {
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+		border-radius: 100px;
+		background-image: url(../img/logo.jpg) center center no-repeat;
+		//background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ski_trail_rating_symbol-blue_square.svg/600px-Ski_trail_rating_symbol-blue_square.svg.png') ;
+		background-size: 141px;  
+		background-position: 50%; 
+		//background-position:center center;
+		//background-repeat:no-repeat;
+	}
 
-/* Navigation */
-
-.navbar-collapse {
-    //padding-left: 180;
-    text-align: right;
-}
-#menu.navbar-default {
-	background-color: #fff;
-	border-color: rgba(231, 231, 231, 0);
-	box-shadow: 0 0 10px rgba(0,0,0,0.15)
-}
-#menu a.navbar-brand {
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-	color: #333;
-	text-transform: uppercase;
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: auto; 
+    margin-left: auto; 
 }
 #menu.navbar-default .navbar-nav > li > a {
-	//font-family: 'Lato', sans-serif;
-	font-family: "CaviarDreams", "Raleway", sans-serif;
-	font-family: "CaviarDreams_Bold", "Raleway", sans-serif;
-	text-transform: uppercase;
-	color: rgba(85, 85, 85, 0.787);
-	font-size: 15px;
-	font-weight: 400;
-	padding: 8px 2px;
-	border-radius: 0;
-	margin: 9px 20px 0 20px;
-}
-#menu.navbar-default .navbar-nav > li > a:after {
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: -1px;
-	width: 0;
-	height: 2px;
-	background: linear-gradient(to right, #eea5ea 0%, #fb5cee 100%);
-	content: "";
-	transition: width 0.2s ease-out;
+		font-size: 12px;
+		font-family: $font-1;
+		//font-weight: bold;
+		font-style: normal;
+		letter-spacing: .3em;
+		text-transform: uppercase;
+		color: #594c35;
+		padding: 10px 50px 10px 10px;
 }
 #menu.navbar-default .navbar-nav > li > a:hover:after {
 	width: 100%;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a:after, .navbar-default .navbar-nav > .active > a:hover:after, .navbar-default .navbar-nav > .active > a:focus:after {
-	display: block !important;
-	position: absolute !important;
-	left: 0 !important;
-	bottom: -1px !important;
-	width: 100% !important;
-	height: 2px !important;
-	background: linear-gradient(to right,  #a5eead 0%, #fb5cee 100%) !important;
-	content: "" !important;
-	transition: width 0.2s ease-out !important;
 }
 .navbar-toggle {
 	border-radius: 0;
@@ -189,7 +221,6 @@ hr {
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	background-color: #fff;
-	// RG31 border-color: #608dfd;
 }
 /* ANIMATED X */
 .navbar-toggle.x .icon-bar:nth-of-type(1) {
@@ -265,7 +296,6 @@ box-shadow: 10px 10px 10px rgba(180, 240, 14, 0.555);
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 	color: #fff;
 	background-image: none;
-	/* @RG31 couleur bouton */
 	background-color: $buton-header-active;
 }
 .btn:active, .btn.active {
@@ -278,49 +308,97 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline: none;
 	outline-offset: none;
 }
-/* Header Section  => TON SITE VITRINE */
-// HEADER
-#header .intro-text {
-	padding-top: 250px;
-	padding-bottom: 250px;
+/* Carousel Section*/
+.carousel {
+	position: absolute;
+	width: auto;
+	height: 500px;
+}
+.carousel .thumbs {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 10px;
+}
+.carousel .thumb {
+	margin: 0 5px;
+	cursor: pointer;
+}
+#slider h1{
+	padding-top: 2%;
+	padding-bottom: 20%;
+	padding-bottom: 50px;
+	background-color: $bg-header;
+	color:  $title-header;
+	text-align: center;
+	font-family: $font-2;
+	font-size: 130px;
+}
+/* Header Section  */
+#header .blanc {
+	background-color: white;
+	padding-top: 7%;
+	padding-bottom: 10%;
 	text-align: center;
 }
+#header .header-color {
+	padding-top: 2%;
+	padding-bottom: 20%;
+	padding-bottom: 50px;
+	background-color: $bg-header;
+}
+#header .header-picture {
+	margin-left: 250px;
+	margin-right: 250px;
+}  
+#header .intro-text h1{
+	//padding-top: 250px;
+	//padding-bottom: 250px;
+	text-align: center;
+	//color: white;
+	color: $title-header;
+	font-family: $font-2;
+	font-size: 130px;
+}
+#header .intro-text p{
+	//padding-top: 250px;
+	//padding-bottom: 250px;
+	text-align: center;
+	color: white;
+	font-family: $font-1-light;
+	font-size: 30px;
+}
 // Le texte dans data.json fera varier l'image en background 
-.intro {
-	font-family: 'CaviarDreams', 'Raleway', sans-serif;
+#header .intro {
+	font-family: 'Brandon-Grotesque', 'Raleway', sans-serif;
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url(../img/intro-bg.jpg) center center no-repeat;
+	//background: url(../img/intro-bg.jpg) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
 }
-.intro .overlay {
+#header .intro .overlay {
 	background: rgba(0,0,0,0.2);
 }
-.intro h1 {
+#header .intro h1 {
 	color: rgb(255, 255, 255);
 	font-size: 82px;
 	padding-top: 0px;
 	padding-bottom: 20px;
 }
-.intro h1 span {
+#header .intro h1 span {
 	font-weight: 800;
 	color: #5ca9fb;
 }
-.intro p {
-	font-family: CaviarDreams;
+#header .intro p {
+	font-family: Brandon-Grotesque;
 	color: #fff;
 	font-size: 32px;
 	margin: 0 auto;
 	margin-bottom: 80px;
-}
-.intro a {
-	font-family: CaviarDreams_Bold;
-	text-transform: none;
-	font-size: 15px;
 }
 /* Features Section  => PRATIQUES */
 #features {
@@ -328,7 +406,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background: #f6f6f6;
 }
 #features p, span{
-font-family: CaviarDreams;
+font-family: Brandon-Grotesque;
 font-size: 18px;
 }
 /* pour les icones => not use => icones remplacés par des images
@@ -489,8 +567,8 @@ font-size: 18px;
 	color:#fff;
 	font-weight: bolder;
 	border: solid;
-	background-color:  #f5ca3eba;;
-	border-color:  #f5ca3eba;;
+	background-color:  #f5ca3eba;
+	border-color:  #f5ca3eba;
 	border-radius: 60px 0px 60px 0px;
 	padding: 10px;
 	box-shadow: 20px 20px 20px rgba(170, 77, 77, 0.555);
@@ -536,16 +614,15 @@ font-size: 18px;
 .portfolio-item .hover-bg {
 	overflow: hidden;
 	position: relative;
-	margin: 0;
-	border-radius: 60px 0px 60px 0px;
+	margin: 30px;
+	//border-radius: 60px 0px 60px 0px;
 }
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
 	margin: 0 auto;
 	color: #fff;
-	background: linear-gradient(to right, #853386 40%,  #ff63ea21 100%);
-    //background: linear-gradient(to right, #f58de4 0%, #853386 100%);
+	background: linear-gradient(to right, $over-bg-2 40%, $over-bg-1 100%);
 	padding: 30% 0 0 0;
 	height: 100%;
 	width: 100%;
@@ -555,7 +632,8 @@ font-size: 18px;
 .hover-bg .hover-text>h4 {
 	font-family: "CaviarDreams_Bold", "Open Sans", sans-serif;
 	opacity: 0;
-	color: #fff;
+	//color: $over-text-h4 ;
+	color: white; 
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
 	transition: all 0.3s;
@@ -669,7 +747,7 @@ box-shadow: 10px 10px 10px rgba(180, 240, 14, 0.555);
 	margin: 5px;
 }
 #contact .thanks {
-	font-family: "CaviarDreams", "Open Sans", sans-serif;
+	font-family: "Brandon-Grotesque", "Open Sans", sans-serif;
 	font-size: 15px;
 	padding: 10px 25px 10px;
 	color: white;
@@ -747,7 +825,6 @@ label {
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
-	/* RG31 */
 	border-radius: 30px ;
 }
 #contact .form-control:focus {
@@ -788,7 +865,7 @@ border-radius: 40px;
 text-align: left;
 }
 #contact .social {
-	border-top: 1px solid rgba(255,255,255,0.15);
+	border-top: 1px solid rgba(231, 135, 10, 0.15);
 	padding-top: 50px;
 	margin-top: 50px;
 	text-align: center;
@@ -827,25 +904,42 @@ text-align: left;
 #footer a:hover {
 	border-bottom: 2px solid #608dfd;
 }
-
-@media (max-width: 768px) {
-/* @RG31*/
+//@media (max-width: 768px) {
+@media (max-width: 600px ) {
 h2{
 	font-weight: 400;
   }
-.intro h1 {
-	font-size: 55px;	
+#header img {
+	margin: 50px 0;
 }
 /* Header Navigation */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	background: linear-gradient(to right,  #f9f7f8 0%, #f5ca3eba 100%) !important;
+	background: linear-gradient(to right,  #f9f7f8 0%, $bg-burger 100%) !important;
 	}
-/* Header Section  => TON SITE VITRINE */
+/* Header Section */
+
 #header .intro-text {
     padding-top: 150px;
 }
 #header .intro p {
 	margin-bottom: 40px;	
+}
+#header .header-item {
+	margin: 1px -15px 0 -14px;
+	padding: 0;
+}
+#header .intro-text h1 {
+	font-size: 80px;
+  }
+  #header .header-picture {
+	margin-left: 10px;
+	margin-right: 10px;
+}  
+/* Carousel Section*/
+.carousel .slide img {
+	width: 80vw !important;
+	height: 40Vh;
+	object-fit: cover
 }
 /* Features Section  => PRATIQUES */
 #features {
@@ -888,8 +982,6 @@ margin-top: -30px;
 	margin-left: 60px;
 	margin-top: 0px;
 }
-
-
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
@@ -907,27 +999,18 @@ margin-top: -30px;
 .hover-bg .hover-text>h4 {
 	font-family: "CaviarDreams_Bold", "Open Sans", sans-serif;
 	opacity: 1;
-	background-image: linear-gradient(to right, #eab4eaf7 0%, #ff63ea21 100%);
+	background-image: linear-gradient(to right, $over-bg-1 0%, $over-bg-2 100%);
 	color: #fff;
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
 	transition: all 0.3s;
-	font-size: 18px;
+	font-size: 15px;
+	font-weight: bold;
 	letter-spacing: 1px;
 	font-weight: 500;
 	text-transform: uppercase;
+	margin: 100px;
 }
-.hover-bg:hover .hover-text>h4 {
-
-}
-.hover-bg:hover .hover-text {
-	
-}
-
-
-
-
-
 /* Portfolio Section => GALERIE */
 #portfolio {
 	padding: 100px 0;
@@ -935,9 +1018,6 @@ margin-top: -30px;
 .portfolio-item {
 	margin: 1px -15px 0 -14px;
 	padding: 0;
-}
-.portfolio-item .hover-bg {
-
 }
 }
 input:focus,
@@ -948,4 +1028,12 @@ form-control:focus
 {
     outline: none;
 	outline: transparent;
+}
+@media (min-width: 1920px) and (max-width: 2560px)  {
+	#header .blanc {
+		background-color: white;
+		padding-top: 7%;
+		padding-bottom: 5%;
+		text-align: center;
+	}
 }

@@ -1,11 +1,8 @@
 export const Header = (props) => {
   return (
-    <header id='header'>
-      <div className='intro'>
-        <div className='overlay'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-md-8 col-md-offset-2 intro-text'>
+    <header id='header' className='text-center'>
+      <div className='blanc'>   </div>
+      <div className='header-color intro-text'> 
                 <div>
                 <h1>
                   {props.data ? props.data.title : 'Loading'}
@@ -13,17 +10,78 @@ export const Header = (props) => {
                 </h1>
                 <p>{props.data ? props.data.paragraph : 'Loading'}</p>
                 </div>
-                <a
-                  href='#contact'
-                  className='btn btn-custom btn-lg page-scroll'
-                >
-                  Me contacter
-                </a>{' '}
+
+        <div className='row'>
+          <div className='header-picture'>
+            <div className='col-sm-6 col-md-4 col-lg-4'>
+              <div className='portfolio-item'>
+                <div className='hover-bg'>
+                  {' '}
+                  <a
+                    href='img/intro/image-1.jpeg'
+                    title=''
+                    data-lightbox-gallery='gallery1'
+                  >
+                    <div className='hover-text'>
+                      <h4>{props.data ? props.data.title1 : 'Loading'}</h4>
+                    </div>
+                    <img
+                      src={props.data ? props.data.img1 : 'Loading'}
+                      className='img-responsive'
+                      alt=''
+                    />{' '}
+                  </a>{' '}
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-6 col-md-4 col-lg-4'>
+              <div className='portfolio-item'>
+                <div className='hover-bg'>
+                  {' '}
+                  <a
+                    href='img/intro/image-2.jpeg'
+                    title=''
+                    data-lightbox-gallery='gallery1'
+                  >
+                    <div className='hover-text'>
+                    <h4>{props.data ? props.data.title2 : 'Loading'}</h4>
+                    </div>
+                    <img
+                      src={props.data ? props.data.img2 : 'Loading'}
+                      className='img-responsive'
+                      alt=''
+                    />{' '}
+                  </a>{' '}
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-6 col-md-4 col-lg-4'>
+              <div className='portfolio-item'>
+                <div className='hover-bg'>
+                  {' '}
+                  <a
+                    href='img/intro/image-3.jpeg'
+                    title=''
+                    data-lightbox-gallery='gallery1'
+                  >
+                    <div className='hover-text'>
+                      <h4>{props.data ? props.data.title3 : 'Loading'}</h4>
+                    </div>
+                    <img
+                      src={props.data ? props.data.img3 : 'Loading'}
+                      className='img-responsive'
+                      alt=''
+                    />{' '}
+                  </a>{' '}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+
+      <div className='blanc'>  </div>
+
+  </header>
   )
 }

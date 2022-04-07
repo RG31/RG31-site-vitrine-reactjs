@@ -38,4 +38,26 @@ code {
         font-weight: normal;
         src: local("CaviarDreams"),
          url("./fonts/caviar_dreams/CaviarDreams_Italic.ttf") format("truetype");
-        }
+      }
+      @font-face {
+        font-family: "BrandonGrotesque_light";
+        font-style: normal;
+        font-weight: normal;
+        src: local("BrandonGrotesque"),
+         url("./fonts/Brandon-Grotesque/brandon-grotesque-light-58a8a4b38001d.otf") format("truetype");
+      }
+      @font-face {
+        font-family: "BrandonGrotesque_black";
+        font-style: normal;
+        font-weight: normal;
+        src: local("BrandonGrotesque"),
+         url("./fonts/Brandon-Grotesque/brandon-grotesque-black-58a8a3e824392.otf") format("truetype");
+      }
+      @font-face {
+        font-family: "BetterGrade";
+        font-style: normal;
+        font-weight: normal;
+        src: local("BrandonGrotesque"),
+         url("./fonts/better-grade/BetterGrade-519DV.ttf") format("truetype");
+      }
+
